@@ -1,0 +1,462 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos del body*/
+    body{
+        font-family: 'Merriweather', serif;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+/*Mobile*/
+
+/*Estilos del header*/
+header{
+    font-size: 1rem;
+    z-index: 2;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   margin: 2px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.boton-nav{
+    height: 10px;
+    margin: 30px;
+
+}
+
+.limpieza{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+
+/*Estilos del main - Home*/
+
+.titulo{
+text-align: center;
+margin: 20px;
+
+}
+
+
+h1 {
+font-size: 35px;
+color: #C4AE82;
+}
+
+h2{
+font-size: 20px;
+color: #C4AE82;
+font-style: italic;
+line-height: 40px;
+}
+
+.imagen-home{
+width: 100%;
+margin-bottom: 50px;
+opacity: .8;
+}
+
+
+/*Estilos del section - Home*/
+
+section{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-bottom: 50px;
+}
+
+.informacion{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-content: center;
+width: 50%;
+}
+
+.caja{
+text-align: center;
+margin: 10px 10px 30px 10px;
+padding: 10px;
+
+}
+
+.titulo-caja{
+font-size: 24px;
+color: #C4AE82;
+font-style: italic;
+margin-bottom: 15px;
+
+}
+
+.contenido-caja{
+font-size: 18px;
+text-align: center;
+line-height: 30px;
+}
+
+
+/*Estilos del main - Servicios*/
+.cartas{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 50px;
+margin-bottom: 80px;
+}
+
+.card{
+border: solid 1px #C4AE82;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 25px;
+}
+
+.card-img{
+width: 250px;
+margin-top: 25px;
+}
+
+.card-body{
+margin: 5px;
+}
+.card-title{
+font-size: 26px;
+color: #C4AE82;
+text-align: center;
+}
+
+.card-text{
+font-size: 16px;
+color: black;
+text-align: center;
+}
+
+.subtitulo{
+font-size: 30px;
+color: #C4AE82;
+text-align: center;
+margin-top: 50px;
+}
+
+
+/*Estilos del main - Nosotros*/
+
+.caja-mural{
+    background-color: #E5E6E4;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mural{
+    margin: 10px;
+}
+
+.contenido-mural{
+    width: 400px;
+    margin: 10px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.titulo-mural{
+    font-size: 25px;
+    color: #C4AE82;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+section div div h3{
+    margin-top: 50px;
+    font-size: 30px;
+    color: #C4AE82;
+    text-align: center;
+}
+
+section div div h4{
+    margin-top: 10px; 
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #C4AE82;
+    text-align: center;
+    font-style: italic;
+}
+
+.mapa{
+    width: 100%;
+}
+
+
+/*Estilos del main - Galeria*/
+
+.conjunto-img{
+margin: 5px;
+}
+section div div img{
+margin: 20px;
+}
+
+.imagenes{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.carousel{
+display: none;
+}
+
+/*Estilos del main - Contacto*/
+
+.titulo-formulario{
+margin-top: 30px; 
+margin-bottom: 40px;
+font-size: 20px;
+color: #C4AE82;
+text-align: center;
+}
+
+.formulario{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 50px;
+}
+
+.w-25{
+    width: 500px;
+}
+/*Estilos del footer*/
+footer div{
+    background-color: #E5E6E4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+footer div div div ul li{
+    text-align: center;
+    font-size: 14px;
+    list-style: none;
+    width: 220px;
+    line-height: 25px;
+    color: rgb(75, 75, 75);
+}
+
+.redes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.logo-redes{
+    height: 50px;
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate-reverse;
+}
+
+
+
+/*Declaro media queries - Desktop*/
+
+@media screen and (min-width:768px){
+    
+    /*Estilos del header*/
+    header{
+        font-size: 1rem;
+        z-index: 2;
+        padding: 5px;
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+    }
+    header div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+       margin: 2px;
+    }
+
+    .boton-nav{
+        height: 10px;
+        margin: 30px;
+    }
+
+    .limpieza{
+        text-decoration: none;
+        color: black;
+        list-style: none;
+    }
+
+
+    /*Estilos del main - Servicios*/
+    .cartas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    /*Transformacion Servicios*/
+
+    .card:hover{
+    transform: scale(1.05);
+    }
+    
+    /*Estilos del main - Nosotros*/
+
+    .caja-mural{
+        background-color: #E5E6E4;
+        margin-top: 30px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contenido-mural{
+        width: 700px;
+        margin: 10px;
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .mapa{
+        width: 1900px;
+    }
+
+
+    /*Estilos del main - Galeria*/
+
+    .conjunto-img{
+        margin: 35px;
+    }
+
+    .imagenes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .carousel{
+        display: inline;
+        margin-top: 30px;
+        }
+        
+    .carousel-item{
+        width: 100%;
+        height: 100%;
+        }
+
+
+    /*Transformacion Galeria*/
+
+    section div div img:hover{
+    transform: scale(1.05);
+    }
+    
+        /*Estilos del footer*/
+        footer div{
+            background-color: #E5E6E4;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "none info redes";
+        }
+
+        .info{
+            grid-area: info;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        footer div div div ul li{
+            text-align: justify;
+            font-size: 14px;
+            list-style: none;
+            width: 220px;
+            line-height: 25px;
+            color: rgb(75, 75, 75);
+        }
+
+        .redes{
+            grid-area: redes;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .logo-redes{
+            height: 50px;
+            animation-name: animacion;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-direction: alternate-reverse;
+        }
+
+    /*Animacion logo redes*/
+
+    @keyframes animacion {
+        from{
+            transform: scale(1);
+        }
+
+        to{
+            transform: scale(1.2);
+        }
+        
+    }
+
+}
+
+
+
