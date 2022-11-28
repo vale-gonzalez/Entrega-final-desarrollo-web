@@ -1,0 +1,137 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//importamos archivos secundarios
+
+
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+@import "html/servicios";
+@import "html/nosotros";
+@import "html/index";
+@import "html/galeria";
+@import "html/contacto";
+
+body{
+    font-family: 'Merriweather', serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*Mobile*/
+
+/*Estilos del header*/
+header{
+    font-size: 1rem;
+    z-index: 2;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    background-color: $color-fondo;
+
+    .navegacion{
+        @include flex-row-between;
+    }
+
+    .logo{
+        margin: 2px;
+        @include flex-row-center;
+    }
+    
+    .boton-nav{
+        height: 10px;
+        margin: 30px;
+    }
+
+    .limpieza{
+        @include limpieza-vinculos
+    }
+}
+
+/*Estilos titulos main*/
+.titulo{
+    text-align: center;
+    margin: 20px;
+    h1{
+        @extend %estilo-titulo;
+    }
+    h2{
+        @extend %estilo-subtitulo;
+    }
+}
+
+/*Estilos del footer*/
+
+
+
+/* Desktop*/
+
+/*Estilos del header*/
+@media screen and (min-width:768px){ 
+    header{
+        div{
+            @include flex-row-between;
+        }
+    }
+
+
+    footer{
+        div{
+            background-color: $color-secundario;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "none info redes";
+
+            div{
+                .info{
+                    grid-area: info;
+                    @include flex-row-around;
+                }
+                .redes{
+                    grid-area: redes;
+                }
+        
+                .logo-redes{
+                    height: 50px;
+                    animation-name: animacion-redes;
+                    animation-iteration-count: infinite;
+                    animation-duration: 2s;
+                    animation-timing-function: ease-in;
+                    animation-direction: alternate-reverse; 
+                } 
+
+                div{ 
+                    ul{
+                        li{
+                            text-align: justify;
+                            font-size: 14px;
+                            list-style: none;
+                            line-height: 25px;
+                            color: $color-texto-secundario;
+                            width: 220px;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+
+
+    @keyframes animacion-redes {
+        from{
+            transform: scale(1);
+        }
+
+        to{
+            transform: scale(1.1);
+        }
+    }
+
+}

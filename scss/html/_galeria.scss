@@ -1,0 +1,62 @@
+/*Mobile*/ 
+
+/*Estilos del main - Galeria*/
+
+main{
+    .carousel{
+    display: none;
+    }
+}
+
+section{
+    .conjunto-img{
+        margin: 5px;
+    }
+    .imagenes{
+        @include flex-column-center
+    }
+    div{
+        div{
+            img{
+                margin:20px;
+             }
+        }
+    }
+}
+
+
+
+/* Desktop*/
+
+/*Estilos del main*/
+@media screen and (min-width:768px){
+    main{
+        .carousel{
+        display: inline;
+        margin-top: 30px;
+            .carousel-item{
+                width: 100%;
+                height: 100%;
+                }
+        }
+    }
+    
+    section{
+        .conjunto-img{
+            margin: 35px;
+        }
+        .imagenes{
+            @include flex-row-center;
+            flex-wrap:wrap;
+            align-content: center;
+
+        }
+        div{
+            div{
+                img:hover{
+                    transform: scale(1.05);
+                 }
+            }
+        }
+    }
+}

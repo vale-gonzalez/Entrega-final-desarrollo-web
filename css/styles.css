@@ -1,0 +1,286 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.titulo h1 {
+  font-size: 35px;
+  color: #C4AE82; }
+
+section div div h4, main .titulo-formulario, .titulo h2 {
+  font-size: 20px;
+  color: #C4AE82;
+  font-style: italic;
+  line-height: 40px;
+  text-align: center; }
+
+main .cartas .card-title, main .subtitulo, section .titulo-caja {
+  font-size: 24px;
+  color: #C4AE82;
+  text-align: center; }
+
+section div div h3 {
+  font-size: 30px;
+  color: #C4AE82;
+  text-align: center; }
+
+/*Mobile*/
+/*Estilos del main - Servicios*/
+main .cartas {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 80px; }
+  main .cartas .card {
+    border: solid 1px #C4AE82;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 25px; }
+  main .cartas .card-img {
+    width: 250px;
+    margin-top: 25px; }
+  main .cartas .card-body {
+    margin: 5px; }
+  main .cartas .card-text {
+    font-size: 16px;
+    color: black;
+    text-align: center; }
+
+main .subtitulo {
+  font-size: 30px;
+  margin-top: 20px; }
+
+/* Desktop*/
+/*Estilos del header*/
+@media screen and (min-width: 768px) {
+  main .cartas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; }
+  main .card:hover {
+    transform: scale(1.05); } }
+
+/*Mobile*/
+/*Estilos del main - Nosotros*/
+main .caja-mural {
+  background-color: #E5E6E4;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px; }
+
+main .mural {
+  margin: 10px; }
+
+main .contenido-mural {
+  width: 400px;
+  margin: 10px;
+  text-align: justify;
+  font-size: 18px; }
+
+main .titulo-mural {
+  font-size: 24px;
+  color: #C4AE82;
+  font-style: italic;
+  margin-bottom: 15px; }
+
+section div div h3 {
+  margin-top: 50px; }
+
+section div div h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 40px; }
+
+section div div .mapa {
+  width: 100%; }
+
+/* Desktop*/
+/*Estilos del main*/
+@media screen and (min-width: 768px) {
+  main .caja-mural {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  main .contenido-mural {
+    width: 700px; }
+  section div div .mapa {
+    width: 1900px; } }
+
+/*Mobile*/
+/*Estilos del main - Home */
+.imagen-home {
+  width: 100%;
+  margin-bottom: 50px;
+  opacity: .8; }
+
+/*Estilos del section - Home */
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px; }
+  section .informacion {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%; }
+  section .caja {
+    text-align: center;
+    margin: 10px 10px 30px 10px;
+    padding: 10px; }
+  section .titulo-caja {
+    font-style: italic;
+    margin-bottom: 15px; }
+  section .contenido-caja {
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px; }
+  section .limpieza {
+    text-decoration: none;
+    color: black;
+    list-style: none; }
+
+/*Mobile*/
+/*Estilos del main - Galeria*/
+main .carousel {
+  display: none; }
+
+section .conjunto-img {
+  margin: 5px; }
+
+section .imagenes {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center; }
+
+section div div img {
+  margin: 20px; }
+
+/* Desktop*/
+/*Estilos del main*/
+@media screen and (min-width: 768px) {
+  main .carousel {
+    display: inline;
+    margin-top: 30px; }
+    main .carousel .carousel-item {
+      width: 100%;
+      height: 100%; }
+  section .conjunto-img {
+    margin: 35px; }
+  section .imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center; }
+  section div div img:hover {
+    transform: scale(1.05); } }
+
+/*Mobile*/
+/*Estilos del main - Contacto*/
+main .formulario {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 50px; }
+
+main .titulo-formulario {
+  margin: 30px 10px 50px 10px; }
+
+main .w-25 {
+  width: 500px; }
+
+body {
+  font-family: 'Merriweather', serif;
+  font-family: 'Quicksand', sans-serif; }
+
+/*Mobile*/
+/*Estilos del header*/
+header {
+  font-size: 1rem;
+  z-index: 2;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; }
+  header .navegacion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  header .logo {
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  header .boton-nav {
+    height: 10px;
+    margin: 30px; }
+  header .limpieza {
+    text-decoration: none;
+    color: black;
+    list-style: none; }
+
+/*Estilos titulos main*/
+.titulo {
+  text-align: center;
+  margin: 20px; }
+
+/*Estilos del footer*/
+/* Desktop*/
+/*Estilos del header*/
+@media screen and (min-width: 768px) {
+  header div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  footer div {
+    background-color: #E5E6E4;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "none info redes"; }
+    footer div div .info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+    footer div div .redes {
+      grid-area: redes; }
+    footer div div .logo-redes {
+      height: 50px;
+      animation-name: animacion-redes;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-direction: alternate-reverse; }
+    footer div div div ul li {
+      text-align: justify;
+      font-size: 14px;
+      list-style: none;
+      line-height: 25px;
+      color: #4b4b4b;
+      width: 220px; }
+  @keyframes animacion-redes {
+    from {
+      transform: scale(1); }
+    to {
+      transform: scale(1.1); } } }

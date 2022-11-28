@@ -1,0 +1,79 @@
+/*Mobile*/ 
+
+/*Estilos del main - Nosotros*/
+
+main{
+    .caja-mural{
+        background-color: $color-secundario;
+        @include flex-column-center;
+        margin-top: 30px;
+        padding: 10px;    
+    }
+    
+    .mural{
+        margin: 10px;
+    }
+
+    .contenido-mural{
+        width: 400px;
+        margin: 10px;
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .titulo-mural{
+        font-size: 24px;
+        color: $color-titulos;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+}
+
+section{
+    div{
+        div{
+            h3{
+                @extend %segundo-titulo;
+                margin-top: 50px;
+            }
+            h4{
+                @extend %estilo-subtitulo;
+                font-size: 18px;
+                margin-top: 10px;
+                margin-bottom: 40px;
+            }
+        }
+
+        div{
+            .mapa{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Desktop*/
+
+/*Estilos del main*/
+@media screen and (min-width:768px){
+    main{
+        .caja-mural{
+            @include flex-row-center;
+        }
+        
+        .contenido-mural{
+            width: 700px;
+        }
+    
+    }
+    
+    section{
+        div{
+            div{
+                .mapa{
+                    width: 1900px;
+                }
+            }
+        }
+    }
+}

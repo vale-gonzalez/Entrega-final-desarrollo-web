@@ -1,0 +1,60 @@
+/*Mobile*/ 
+
+/*Estilos del main - Servicios*/
+main{
+    .cartas{
+        @include flex-column-center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    
+        .card{
+            border: solid 1px $color-titulos;
+            @include flex-column-center;
+            margin: 25px;
+        }
+
+        .card-img{
+            width: 250px;
+            margin-top: 25px;
+        }
+
+        .card-body{
+            margin: 5px;
+        }
+
+        .card-title{
+            @extend %estilo-caja;
+        }
+
+        .card-text{
+            font-size: 16px;
+            color: $color-texto;
+            text-align: center;
+        }
+    }
+    
+    .subtitulo{
+        font-size: 30px;
+        @extend %estilo-caja;
+        margin-top: 20px;
+    }
+}
+
+
+/* Desktop*/
+
+/*Estilos del header*/
+@media screen and (min-width:768px){
+    main{
+        .cartas{
+            @include flex-row-center;
+            flex-wrap: wrap;
+        }
+        
+        //Transformacion
+        .card:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
