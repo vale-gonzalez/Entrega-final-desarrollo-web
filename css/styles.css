@@ -15,7 +15,7 @@ section div div h4, main .titulo-formulario, .titulo h2 {
   line-height: 40px;
   text-align: center; }
 
-main .cartas .card-title, main .subtitulo, section .titulo-caja {
+main .card-title, main .subtitulo, section .titulo-caja {
   font-size: 24px;
   color: #C4AE82;
   text-align: center; }
@@ -34,57 +34,72 @@ main .cartas {
   align-items: center;
   margin-top: 50px;
   margin-bottom: 80px; }
-  main .cartas .card {
-    border: solid 1px #C4AE82;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    margin: 25px; }
-  main .cartas .card-img {
-    width: 250px;
-    margin-top: 25px; }
-  main .cartas .card-body {
-    margin: 5px; }
-  main .cartas .card-text {
-    font-size: 16px;
-    color: black;
-    text-align: center; }
+
+main .card {
+  border: solid 1px #C4AE82;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  margin: 25px;
+  padding: 5px;
+  height: 500px; }
+
+main .card-img {
+  width: 250px;
+  margin-top: 25px; }
+
+main .card-body {
+  margin: 5px; }
+
+main .card-text {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  height: 150px;
+  margin: 5px;
+  padding: 5px; }
 
 main .subtitulo {
   font-size: 30px;
   margin-top: 20px; }
 
 /* Desktop*/
-/*Estilos del header*/
-@media screen and (min-width: 768px) {
+/*Estilos del main - Servicios*/
+@media screen and (min-width: 992px) {
   main .cartas {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap; }
+    align-items: center; }
   main .card:hover {
     transform: scale(1.05); } }
 
 /*Mobile*/
 /*Estilos del main - Nosotros*/
 main .caja-mural {
-  background-color: #E5E6E4;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px;
   padding: 10px; }
 
 main .mural {
-  margin: 10px; }
+  margin: 5px 30px 5px 20px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center; }
 
 main .contenido-mural {
   width: 400px;
   margin: 10px;
   text-align: justify;
-  font-size: 18px; }
+  font-size: 18px;
+  margin-right: 20px;
+  padding: 15px; }
 
 main .titulo-mural {
   font-size: 24px;
@@ -103,30 +118,83 @@ section div div h4 {
 section div div .mapa {
   width: 100%; }
 
-/* Desktop*/
-/*Estilos del main*/
+/* Tablet*/
+/*Estilos del main - Nosotros*/
 @media screen and (min-width: 768px) {
   main .caja-mural {
+    width: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; }
+  main .contenido-mural {
+    width: 650px;
+    margin: 10px; }
+  /*Estilos del section - Nosotros*/
+  section div div .mapa {
+    width: 768px; } }
+
+/* Desktop*/
+/*Estilos del main - Nosotros*/
+@media screen and (min-width: 992px) {
+  main .alineacion-nosotros {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
+  main .caja-mural {
+    border: solid 1px #C4AE82;
+    border-radius: .4rem;
+    width: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px; }
+  main .mural {
+    margin: 5px 20px 5px 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; }
   main .contenido-mural {
-    width: 700px; }
+    width: 800px;
+    margin: 5px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 18px;
+    margin-right: 20px; }
+  main .titulo-mural {
+    font-size: 24px;
+    color: #C4AE82;
+    font-style: italic;
+    margin-bottom: 15px; }
+  /*Estilos del section - Nosotros*/
   section div div .mapa {
     width: 1900px; } }
 
 /*Mobile*/
 /*Estilos del main - Home */
-.imagen-home {
+main .imagen-home-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin-bottom: 50px;
   opacity: .8; }
+
+main .imagen-home {
+  display: none; }
 
 /*Estilos del section - Home */
 section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px; }
   section .informacion {
     display: flex;
@@ -134,9 +202,8 @@ section {
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 50%; }
+    width: 80%; }
   section .caja {
-    text-align: center;
     margin: 10px 10px 30px 10px;
     padding: 10px; }
   section .titulo-caja {
@@ -144,12 +211,39 @@ section {
     margin-bottom: 15px; }
   section .contenido-caja {
     font-size: 18px;
-    text-align: center;
+    text-align: justify;
     line-height: 30px; }
   section .limpieza {
     text-decoration: none;
     color: black;
-    list-style: none; }
+    list-style: none;
+    text-align: center; }
+
+/* Tablet*/
+/*Estilos del main - Home */
+@media screen and (min-width: 768px) {
+  main .imagen-home {
+    display: inline;
+    width: 100%;
+    margin-bottom: 50px;
+    opacity: .8; }
+  main .imagen-home-mobile {
+    display: none; } }
+
+/* Desktop*/
+/*Estilos del main - Home */
+@media screen and (min-width: 992px) {
+  main .imagen-home {
+    height: 700px; }
+  main .imagen-home-mobile {
+    display: none; }
+  /*Estilos del section - Home */
+  section .informacion {
+    width: 60%; }
+  section .caja {
+    text-align: center; }
+  section .contenido-caja {
+    text-align: center; } }
 
 /*Mobile*/
 /*Estilos del main - Galeria*/
@@ -168,24 +262,41 @@ section .imagenes {
 section div div img {
   margin: 20px; }
 
-/* Desktop*/
-/*Estilos del main*/
+/* Tablet*/
+/*Estilos del main - Galeria*/
 @media screen and (min-width: 768px) {
   main .carousel {
     display: inline;
     margin-top: 30px; }
-    main .carousel .carousel-item {
-      width: 100%;
-      height: 100%; }
+  main .carousel-item {
+    width: 100%;
+    height: 100%; }
+  /*Estilos del section - Galeria*/
+  section .conjunto-img {
+    margin: 10px; }
+  section .imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+  section div div img {
+    width: 200px; } }
+
+/* Desktop*/
+/*Estilos del section - Galeria*/
+@media screen and (min-width: 992px) {
   section .conjunto-img {
     margin: 35px; }
   section .imagenes {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: center; }
-  section div div img:hover {
+    align-items: center;
+    flex-wrap: wrap; }
+  section div div img {
+    width: 400px; }
+  section img:hover {
     transform: scale(1.05); } }
 
 /*Mobile*/
@@ -203,6 +314,20 @@ main .titulo-formulario {
 main .w-25 {
   width: 500px; }
 
+main .boton-enviar {
+  background-color: #ffffff;
+  border: solid 1px #C4AE82;
+  border-radius: .4rem;
+  width: 100%;
+  padding: 5px; }
+
+/* Desktop*/
+/*Estilos del main - Contacto*/
+@media screen and (min-width: 992px) {
+  /*Animaciones img*/
+  main .boton-enviar:hover {
+    filter: drop-shadow(1px 1px 1px grey); } }
+
 body {
   font-family: 'Merriweather', serif;
   font-family: 'Quicksand', sans-serif; }
@@ -216,20 +341,24 @@ header {
   position: sticky;
   top: 0;
   background-color: #ffffff; }
+  header div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; }
   header .navegacion {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: space-around;
+    align-items: center;
+    width: 50%; }
   header .logo {
-    margin: 2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
+    margin: 2px; }
   header .boton-nav {
     height: 10px;
-    margin: 30px; }
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px; }
   header .limpieza {
     text-decoration: none;
     color: black;
@@ -241,15 +370,86 @@ header {
   margin: 20px; }
 
 /*Estilos del footer*/
-/* Desktop*/
-/*Estilos del header*/
-@media screen and (min-width: 768px) {
-  header div {
+footer div {
+  background-color: #E5E6E4;
+  padding: 10px; }
+  footer div .info {
+    display: none; }
+  footer div .redes {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; }
+  footer div .logo-redes {
+    height: 50px; }
+
+/* Tablet*/
+/*Estilos del main - Contacto*/
+@media screen and (min-width: 768px) {
+  footer div {
+    background-color: #E5E6E4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center; }
+    footer div .info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+    footer div .redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center; }
+    footer div .logo-redes {
+      height: 50px; }
+    footer div div div {
+      width: 250px;
+      padding: 5px; }
+      footer div div div ul li {
+        text-align: justify;
+        font-size: 14px;
+        list-style: none;
+        line-height: 25px;
+        color: #4b4b4b;
+        width: 220px; } }
+
+/* Desktop*/
+/*Estilos del header*/
+@media screen and (min-width: 992px) {
+  header {
+    font-size: 1rem;
+    z-index: 2;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; }
+    header div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; }
+    header .navegacion {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 35%; }
+    header .logo {
+      margin: 2px; }
+    header .boton-nav {
+      height: 10px;
+      width: 70px;
+      padding: 1px;
+      margin: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
   footer div {
     background-color: #E5E6E4;
     padding: 10px;
@@ -257,28 +457,26 @@ header {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "none info redes"; }
-    footer div div .info {
+    footer div .info {
+      width: 100%;
       grid-area: info;
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      flex-direction: row;
+      justify-content: center;
       align-items: center; }
-    footer div div .redes {
-      grid-area: redes; }
-    footer div div .logo-redes {
+    footer div .redes {
+      grid-area: redes;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center; }
+    footer div .logo-redes {
       height: 50px;
       animation-name: animacion-redes;
       animation-iteration-count: infinite;
       animation-duration: 2s;
       animation-timing-function: ease-in;
       animation-direction: alternate-reverse; }
-    footer div div div ul li {
-      text-align: justify;
-      font-size: 14px;
-      list-style: none;
-      line-height: 25px;
-      color: #4b4b4b;
-      width: 220px; }
   @keyframes animacion-redes {
     from {
       transform: scale(1); }

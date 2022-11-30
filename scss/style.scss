@@ -33,18 +33,24 @@ header{
     top: 0;
     background-color: $color-fondo;
 
+    div{
+        @include flex-column-center;
+    }
+
     .navegacion{
-        @include flex-row-between;
+        @include flex-row-around;
+        width: 50%;
     }
 
     .logo{
         margin: 2px;
-        @include flex-row-center;
     }
     
     .boton-nav{
         height: 10px;
-        margin: 30px;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .limpieza{
@@ -66,48 +72,52 @@ header{
 
 /*Estilos del footer*/
 
+footer{
+    div{
+        background-color: $color-secundario;
+        padding: 10px;
 
+        .info{
+            display: none;
 
-/* Desktop*/
-
-/*Estilos del header*/
-@media screen and (min-width:768px){ 
-    header{
-        div{
-            @include flex-row-between;
         }
+        .redes{
+            @include flex-row-center;
+        }
+    
+        .logo-redes{
+            height: 50px;
+        } 
     }
+}
 
 
+/* Tablet*/
+
+/*Estilos del main - Contacto*/
+@media screen and (min-width:768px){
     footer{
         div{
             background-color: $color-secundario;
             padding: 10px;
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: 
-            "none info redes";
-
-            div{
-                .info{
-                    grid-area: info;
-                    @include flex-row-around;
-                }
-                .redes{
-                    grid-area: redes;
-                }
+            @include flex-column-center;
+    
+            .info{
+                width: 100%;
+                @include flex-row-center;
+    
+            }
+            .redes{
+                @include flex-row-end;
+            }
         
-                .logo-redes{
-                    height: 50px;
-                    animation-name: animacion-redes;
-                    animation-iteration-count: infinite;
-                    animation-duration: 2s;
-                    animation-timing-function: ease-in;
-                    animation-direction: alternate-reverse; 
-                } 
-
+            .logo-redes{
+                height: 50px;
+            } 
+            div{
                 div{ 
+                    width: 250px;
+                    padding: 5px;
                     ul{
                         li{
                             text-align: justify;
@@ -119,7 +129,75 @@ header{
                         }
                     }
                 }
-            }  
+            }
+        }
+    }
+}
+
+
+/* Desktop*/
+
+/*Estilos del header*/
+@media screen and (min-width:992px){ 
+
+    header{
+        font-size: 1rem;
+        z-index: 2;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        background-color: $color-fondo;
+
+        div{
+            @include flex-row-between;
+        }
+
+        .navegacion{
+
+            @include flex-row-around;
+            width: 35%;
+        }
+        .logo{
+            margin: 2px;
+        }
+        
+        .boton-nav{
+            height: 10px;
+            width: 70px;
+            padding: 1px;
+            margin: 30px;
+            @include flex-row-center;
+
+        }
+    }
+
+    footer{
+        div{
+            background-color: $color-secundario;
+            padding: 10px;
+            @include grilla-3c-1f;
+            grid-template-areas: 
+            "none info redes";
+    
+            .info{
+                width: 100%;
+                grid-area: info;
+                @include flex-row-center;
+    
+            }
+            .redes{
+                grid-area: redes;
+                @include flex-row-end;
+            }
+        
+            .logo-redes{
+                height: 50px;
+                animation-name: animacion-redes;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                animation-direction: alternate-reverse; 
+            } 
         }
     }
 

@@ -6,33 +6,38 @@ main{
         @include flex-column-center;
         margin-top: 50px;
         margin-bottom: 80px;
-    
-        .card{
-            border: solid 1px $color-titulos;
-            @include flex-column-center;
-            margin: 25px;
-        }
-
-        .card-img{
-            width: 250px;
-            margin-top: 25px;
-        }
-
-        .card-body{
-            margin: 5px;
-        }
-
-        .card-title{
-            @extend %estilo-caja;
-        }
-
-        .card-text{
-            font-size: 16px;
-            color: $color-texto;
-            text-align: center;
-        }
     }
-    
+
+    .card{
+        border: solid 1px $color-titulos;
+        @include flex-column-around;
+        margin: 25px;
+        padding: 5px;
+        height: 500px;
+    }
+
+    .card-img{
+        width: 250px;
+        margin-top: 25px;
+    }
+
+    .card-body{
+        margin: 5px;
+    }
+
+    .card-title{
+        @extend %estilo-caja;
+    }
+
+    .card-text{
+        font-size: 16px;
+        color: $color-texto;
+        text-align: center;
+        height: 150px;
+        margin: 5px;
+        padding: 5px;
+    }
+
     .subtitulo{
         font-size: 30px;
         @extend %estilo-caja;
@@ -41,15 +46,16 @@ main{
 }
 
 
+
 /* Desktop*/
 
-/*Estilos del header*/
-@media screen and (min-width:768px){
+/*Estilos del main - Servicios*/
+@media screen and (min-width:992px){
     main{
         .cartas{
             @include flex-row-center;
-            flex-wrap: wrap;
         }
+
         
         //Transformacion
         .card:hover{

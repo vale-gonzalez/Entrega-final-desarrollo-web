@@ -1,12 +1,20 @@
 /*Mobile*/ 
 
 /*Estilos del main - Home */
+main{
 
-.imagen-home{
-    width: 100%;
-    margin-bottom: 50px;
-    opacity: .8;
+    .imagen-home-mobile{
+        @include flex-row-center;
+        width: 100%;
+        margin-bottom: 50px;
+        opacity: .8;
+    }
+
+    .imagen-home{
+        display: none;
+    }
 }
+
 
 /*Estilos del section - Home */
 section {
@@ -16,11 +24,10 @@ section {
     .informacion{
         @include flex-column-center;
         flex-wrap: wrap;
-        width: 50%;
+        width: 80%;
     }
 
     .caja{
-        text-align: center;
         margin: 10px 10px 30px 10px;
         padding: 10px;
     }
@@ -33,13 +40,69 @@ section {
 
     .contenido-caja{
         font-size: 18px;
-        text-align: center;
+        text-align: justify;
         line-height: 30px;
     }
 
     .limpieza{
         @include limpieza-vinculos;
+        text-align: center;
     }
 }
 
 
+/* Tablet*/
+
+/*Estilos del main - Home */
+@media screen and (min-width:768px){
+    main{
+        .imagen-home{
+            display: inline;
+            width: 100%;
+            margin-bottom: 50px;
+            opacity: .8;
+        }
+
+        .imagen-home-mobile{
+            display: none;
+        }
+    }
+}
+
+
+
+
+/* Desktop*/
+
+/*Estilos del main - Home */
+
+@media screen and (min-width:992px){
+
+    main{
+        .imagen-home{
+            height: 700px;
+        }
+
+        .imagen-home-mobile{
+            display: none;
+        }
+    }
+
+    /*Estilos del section - Home */
+    section {
+    
+        .informacion{
+            width: 60%;
+        }
+    
+        .caja{
+            text-align: center;
+        }
+    
+    
+        .contenido-caja{
+            text-align: center;
+        }
+    }
+
+}

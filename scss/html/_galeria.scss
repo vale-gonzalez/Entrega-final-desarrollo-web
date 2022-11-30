@@ -24,23 +24,49 @@ section{
     }
 }
 
+/* Tablet*/
 
-
-/* Desktop*/
-
-/*Estilos del main*/
+/*Estilos del main - Galeria*/
 @media screen and (min-width:768px){
     main{
         .carousel{
         display: inline;
         margin-top: 30px;
-            .carousel-item{
-                width: 100%;
-                height: 100%;
+        }
+
+        .carousel-item{
+            width: 100%;
+            height: 100%;
+            }
+
+    }
+
+    /*Estilos del section - Galeria*/
+    section{
+        .conjunto-img{
+            margin: 10px;
+        }
+        .imagenes{
+            @include flex-row-center;
+            flex-wrap: wrap;
+        }
+        div{
+            div{
+                img{
+                    width: 200px;
                 }
+            }
         }
     }
-    
+}
+
+
+
+/* Desktop*/
+
+/*Estilos del section - Galeria*/
+@media screen and (min-width:992px){
+
     section{
         .conjunto-img{
             margin: 35px;
@@ -48,15 +74,21 @@ section{
         .imagenes{
             @include flex-row-center;
             flex-wrap:wrap;
-            align-content: center;
-
         }
+
         div{
             div{
-                img:hover{
-                    transform: scale(1.05);
-                 }
+                img{
+                    width: 400px;
+                }
             }
         }
+
+    //Transformacion
+        img:hover{
+            transform: scale(1.05);
+        }
     }
+
+
 }

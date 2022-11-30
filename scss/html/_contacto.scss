@@ -16,4 +16,25 @@ main{
         width: 500px;
     }
     
+    .boton-enviar{
+        background-color: $color-fondo;
+        border: solid 1px $color-titulos;
+        border-radius: .4rem;
+        width: 100%;
+        padding: 5px;
+    }
+ 
+}
+
+
+
+/* Desktop*/
+
+/*Estilos del main - Contacto*/
+@media screen and (min-width:992px){
+
+    /*Animaciones img*/
+    main .boton-enviar:hover{
+        filter: drop-shadow(1px 1px 1px grey);
+}
 }

@@ -4,14 +4,15 @@
 
 main{
     .caja-mural{
-        background-color: $color-secundario;
         @include flex-column-center;
-        margin-top: 30px;
+        margin: 30px;
         padding: 10px;    
     }
     
     .mural{
-        margin: 10px;
+        margin: 5px 30px 5px 20px;
+        width: 350px;
+        @include flex-column-center;
     }
 
     .contenido-mural{
@@ -19,6 +20,8 @@ main{
         margin: 10px;
         text-align: justify;
         font-size: 18px;
+        margin-right: 20px;
+        padding: 15px;
     }
 
     .titulo-mural{
@@ -36,6 +39,7 @@ section{
                 @extend %segundo-titulo;
                 margin-top: 50px;
             }
+
             h4{
                 @extend %estilo-subtitulo;
                 font-size: 18px;
@@ -52,21 +56,80 @@ section{
     }
 }
 
-/* Desktop*/
 
-/*Estilos del main*/
+/* Tablet*/
+
+/*Estilos del main - Nosotros*/
 @media screen and (min-width:768px){
     main{
         .caja-mural{
+            width: 1fr;
+            @include flex-column-center;   
+        }
+
+        .contenido-mural{
+            width: 650px;
+            margin: 10px;
+
+        }
+    }
+
+    /*Estilos del section - Nosotros*/
+    section{
+        div{
+            div{
+                .mapa{
+                    width: 768px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/* Desktop*/
+
+/*Estilos del main - Nosotros*/
+@media screen and (min-width:992px){
+    main{
+        .alineacion-nosotros{
             @include flex-row-center;
         }
+        .caja-mural{
+            border: solid 1px $color-titulos;
+            border-radius: .4rem;
+            width: 1fr;
+            @include flex-row-center;
+            margin-top: 30px;
+            padding: 10px;    
+        }
         
-        .contenido-mural{
-            width: 700px;
+        .mural{
+            margin: 5px 20px 5px 20px;
+            width: 350px;
+            @include flex-column-center;
         }
     
-    }
+        .contenido-mural{
+            width: 800px;
+            margin: 5px;
+            line-height: 1.5;
+            text-align: justify;
+            font-size: 18px;
+            margin-right: 20px;
+        }
     
+        .titulo-mural{
+            font-size: 24px;
+            color: $color-titulos;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+    }
+
+    /*Estilos del section - Nosotros*/
     section{
         div{
             div{
